@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Antarctica";
+  src: url("/assets/fonts/Antarctica.ttf") format("truetype-variations");
+}
+
 *,
 *::before,
 *::after
@@ -6,6 +11,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: 'Antarctica';
 }
 
 body
@@ -14,4 +20,9 @@ body
   -moz-osx-font-smoothing: greyscale;
 
   background-color: var(--bg-color);
+}
+
+h1
+{
+  font-size: 16vw;
 }
