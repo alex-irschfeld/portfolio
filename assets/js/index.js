@@ -1,9 +1,9 @@
 function cursorLight(event)
 {
   let light        = document.querySelector('#light');
-  let startText    = document.querySelector('#start-wrapper h1');
+  let indexText    = document.querySelector('#index-wrapper h1');
   let bodyTag      = document.querySelector('body');
-  let startWrapper = document.querySelector('#start-wrapper');
+  let indexWrapper = document.querySelector('#index-wrapper');
 
   let mouseX = event.clientX;
   let mouseY = event.clientY;
@@ -24,37 +24,36 @@ function cursorLight(event)
   // let cntrAxis = map(mouseY, 0, window.innerHeight, 100, 0);
 
   // light.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`
-  startWrapper.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
-  startText.style.color         = `rgba(${r}, ${g}, ${b}, ${a})`;
+  indexWrapper.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${a})`;
+  indexText.style.color         = `rgba(${r}, ${g}, ${b}, ${a})`;
 
-  startText.style.fontVariationSettings = `"wdth" ${wdthAxis}, "wght" ${wghtAxis}`;
+  indexText.style.fontVariationSettings = `"wdth" ${wdthAxis}, "wght" ${wghtAxis}`;
 
-  startText.style.letterSpacing = `${letterSpace}` + 'em';
-  startText.style.lineHeight = `${line}`;
+  indexText.style.letterSpacing = `${letterSpace}` + 'em';
+  indexText.style.lineHeight = `${line}`;
 }
 
 function zoomOnClick()
 {
   let light = document.querySelector('#light');
   let bodyTag = document.querySelector('body');
-  let startWrapper = document.querySelector('#start-wrapper');
+  let indexWrapper = document.querySelector('#index-wrapper');
 
   light.style.transform = 'scale(10)';
 
   if(light.style.transform == 'scale(10)')
   {
-    startWrapper.style.opacity    = '0';
+    indexWrapper.style.opacity    = '0';
     setTimeout(function()
     {
-      startWrapper.style.display = 'none';
-      startWrapper.style.cursor  = 'auto';
+      indexWrapper.style.display = 'none';
       light.style.display        = 'none';
-      bodyTag.style.backgroundColor = 'black';
-      
+      window.location.href = "start.html";
     }, 500);
   };
 
   
 }
+
 
 

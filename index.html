@@ -1,17 +1,18 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: enter
 ---
 
 
 
-<div id="start-wrapper" onclick="zoomOnClick()" onmousemove="cursorLight(event)">
+<div id="index-wrapper" onclick="zoomOnClick()" onmousemove="cursorLight(event)">
 
   <div id="light"></div>
 
   <h1>
-    Hinnerk<br>
-    Muster<br>
+    {{ site.data.general.prename }}<br>
+    {{ site.data.general.surename }}<br>
     <span>click to enter</span>
   </h1>
   
