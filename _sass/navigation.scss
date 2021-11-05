@@ -1,0 +1,43 @@
+nav
+{
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.8vw;
+  // mix-blend-mode: difference;
+  width: 100vw;
+  z-index: 999;
+}
+
+nav button
+{
+ color: white;
+}
+
+nav, nav button
+{
+  font-size: 5vw;
+}
+
+nav button, #title a
+{
+  transition: color .2s;
+}
+
+
+nav button:hover, #title a:hover
+{
+  color: grey;
+}
+
+nav ul
+{
+  display: none;
+}
+
+nav li a {
+  transition: color .2s;
+}
